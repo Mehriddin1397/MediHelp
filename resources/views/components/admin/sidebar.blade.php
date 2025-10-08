@@ -1,10 +1,10 @@
 <nav class="nxl-navigation">
-    <div class="navbar-wrapper" style="background-color: #dcddea">
+    <div class="navbar-wrapper">
         <div class="m-header">
-            <a href="#" class="b-brand">
+            <a href="{{route('main')}}" class="b-brand">
                 <!-- ========   change your logo hear   ============ -->
-                <img src="{{asset('/img/logo/3.png')}}" alt="" class="logo logo-lg"/>
-                <img src="{{asset('/img/logo/3.png')}}" alt="" class="logo logo-sm"/>
+                <img src="{{asset('assets/images/logoo.jfif')}}" alt="" style="width: 60px; height: 60px; !important;" class="logo logo-lg"/>
+                <img src="{{asset('assets/images/logoo.jfif')}}" alt="" class="logo logo-sm"/>
             </a>
         </div>
         <div class="navbar-content">
@@ -12,114 +12,96 @@
                 <li class="nxl-item nxl-caption">
                     <label>Navigation</label>
                 </li>
-                {{--                <li class="nxl-item nxl-hasmenu">--}}
-                {{--                    <a href="{{route('dashboard')}}" class="nxl-link">--}}
-                {{--                        <span class="nxl-micon"><i class="feather-airplay"></i></span>--}}
-                {{--                        <span class="nxl-mtext">Monitoring</span><span class="nxl-arrow"></span>--}}
-                {{--                    </a>--}}
-                {{--                </li>--}}
-                @auth
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="{{route('tasks.index')}}" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-layout"></i></span>
-                            <span class="nxl-mtext">Топшириқлар</span><span class="nxl-arrow"></span>
-                        </a>
-                    </li>
-                    @if (auth()->user()->role === 'admin')
-                        <li class="nxl-item nxl-hasmenu">
-                            <a href="{{route('users.index')}}" class="nxl-link">
-                                <span class="nxl-micon"><i class="feather-airplay"></i></span>
-                                <span class="nxl-mtext">Xodimlar</span><span class="nxl-arrow"></span>
-                            </a>
-                        </li>
-                        <li class="nxl-item nxl-hasmenu">
-                            <a href="{{route('categories.index')}}" class="nxl-link">
-                                <span class="nxl-micon"><i class="feather-layout"></i></span>
-                                <span class="nxl-mtext"> <strong>Kategoriyalar</strong></span><span
-                                    class="nxl-arrow"></span>
-                            </a>
-                        </li>
-                    @endif
-                    @if (auth()->user()->role !== 'xodim' || auth()->user()->id == 21)
-                        <li class="nxl-item nxl-hasmenu">
-                            <a href="{{route('participants.index')}}" class="nxl-link">
-                                <span class="nxl-micon"><i class="feather-layout"></i></span>
-                                <span class="nxl-mtext"> <strong>Жамоат хавфсизлиги бўйича ташаббус индекси</strong></span><span
-                                    class="nxl-arrow"></span>
-                            </a>
-                        </li>
-                    @endif
-
-                    <li class="nxl-item nxl-hasmenu">
-                        <a href="{{route('projects.index')}}" class="nxl-link">
-                            <span class="nxl-micon"><i class="feather-layout"></i></span>
-                            <span class="nxl-mtext">Лойиҳалар</span><span class="nxl-arrow"></span>
-                        </a>
-                    </li>
-
-
-                    @if (in_array(auth()->user()->role, ['admin']))
-
-                        <li class="nxl-item nxl-hasmenu">
-                            <a href="{{route('monitoring.umumiy')}}" class="nxl-link">
-                                <span class="nxl-micon"><i class="feather-cast"></i></span>
-                                <span class="nxl-mtext">Ходимлар статистикаси</span><span class="nxl-arrow"></span>
-                            </a>
-                        </li>
-                    @endif
-                    @if (in_array(auth()->user()->role, ['admin','boshliq']))
-
-                        <li class="nxl-item nxl-hasmenu">
-                            <a href="{{route('monitoring.hisobot')}}" class="nxl-link">
-                                <span class="nxl-micon"><i class="feather-users"></i></span>
-                                <span class="nxl-mtext">Ҳисобот</span><span class="nxl-arrow"></span>
-                            </a>
-                        </li>
-                    @endif
-
-                @endauth
                 <li class="nxl-item nxl-hasmenu">
-                    <a href="{{ route('documents.byCategory', 3) }}" class="nxl-link">
+                    <a href="{{route('dashboard')}}" class="nxl-link">
                         <span class="nxl-micon"><i class="feather-airplay"></i></span>
-                        <span class="nxl-mtext">Институт буйруқ ва фармойишлари</span><span class="nxl-arrow"></span>
+                        <span class="nxl-mtext">Boshqaruv paneli</span><span class="nxl-arrow"></span>
                     </a>
-                </li>
-
-
-                <li class="nxl-item nxl-hasmenu">
-                    <a href="javascript:void(0);" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-briefcase"></i></span>
-                        <span class="nxl-mtext">Электрон кутубхона</span><span class="nxl-arrow"><i
-                                class="feather-chevron-right"></i></span>
-                    </a>
-                    <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('documents.byCategory', 1) }}">Президент
-                                фармон ва қарорлари</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('documents.byCategory', 2) }}">Вазирлар
-                                Махкамасининг фармон,қарор топшириқлари</a></li>
-
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('documents.byCategory', 4) }}">Лойиҳа ва
-                                илмий-амалий тадқиқотлар</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{ route('documents.byCategory', 5) }}">Ҳалқаро
-                                хорижий сафарлар ва ҳамкорлик </a></li>
-                    </ul>
                 </li>
                 <li class="nxl-item nxl-hasmenu">
-                    <a href="javascript:void(0);" class="nxl-link">
-                        <span class="nxl-micon"><i class="feather-settings"></i></span>
-                        <span class="nxl-mtext">Лабаратория</span><span class="nxl-arrow"><i class="feather-chevron-right"></i></span>
+                    <a href="{{route('academia.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Ilmiy Kengash</span><span class="nxl-arrow"></span>
                     </a>
-                    <ul class="nxl-submenu">
-                        <li class="nxl-item"><a class="nxl-link" href="#">Топшириқлар</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{route('ongoing-works.index')}}">Жараёндаги ишлар</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{route('planned-works.index')}}">Режалаштирилган ишлар</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{route('completed-works.index')}}">Бажарилган ишлар</a></li>
-                        <li class="nxl-item"><a class="nxl-link" href="{{route('suggestions.index')}}">Таклифлар</a></li>
-                    </ul>
                 </li>
-
-
-
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('bibliophilia.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Kitobxonlik</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('crimes.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Jinoyatlar</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('institut.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Institutlar va ishga qabul</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('journal.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Jo'rnallar</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('news.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Yangiliklar </span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('rahbariyat.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Rahbariyat</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('categories.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext"> <strong>Kategoriyalar</strong></span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('articles.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Maqola va disertatsiya mavzulari</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('research.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Tadqiqotlar</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('scholars.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Tadqiqotchilar va Amaliy yordam</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('contact.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Bog'lanish</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('expertise.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Ilmiy salohiyat va hamkorlar</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{route('partner.index')}}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">Hamkorlar</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

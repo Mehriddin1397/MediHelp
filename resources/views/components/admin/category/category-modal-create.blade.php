@@ -21,13 +21,50 @@
                 <div class="col-md-6">
                     <div class="form-group mb-4">
                         <label class="form-label">Kategoriya nomi (uz):</label>
-                        <input type="text" name="name" class="form-control">
+                        <input type="text" name="name_uz" class="form-control">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Kategoriya nomi (ru):</label>
+                        <input type="text" name="name_ru" class="form-control">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Kategoriya nomi (en):</label>
+                        <input type="text" name="name_en" class="form-control">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Kategoriya nomi (kr):</label>
+                        <input type="text" name="name_kr" class="form-control">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Obekt nomi (uz):</label>
+                        <input type="text" name="slug_uz" class="form-control">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Obekt nomi (ru):</label>
+                        <input type="text" name="slug_ru" class="form-control">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Obekt nomi (en):</label>
+                        <input type="text" name="slug_en" class="form-control">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="form-label">Obekt nomi (kr):</label>
+                        <input type="text" name="slug_kr" class="form-control">
                     </div>
                     <div class="form-group mb-4">
                         <label for="object_type">Obyekt turi:</label>
                         <select name="object_type" class="form-select form-control" required>
-                            <option value="tasks">Topshiriqlar</option>
-                            <option value="baza">Elektron Baza</option>
+                            <option value="academia">Ilmiy kengash </option>
+                            <option value="bibliophilia">Kitobxonlik</option>
+                            <option value="crimes">Jinoyatlar</option>
+                            <option value="institut">Institut va ishga qabul</option>
+                            <option value="jurnal">Jurnallar</option>
+                            <option value="news">Yangiliklar</option>
+                            <option value="research">Tadqiqotlar</option>
+                            <option value="scholars">Tadqiqotchilar va amaliy yordam</option>
+                            <option value="partner">Hamkorlar</option>
+                            <option value="expertise">Ilmiy salohiyat va hamkorlar</option>
+                            <option value="articles">Maqola va disertatsiya mavzulari</option>
                         </select>
                     </div>
                 </div>

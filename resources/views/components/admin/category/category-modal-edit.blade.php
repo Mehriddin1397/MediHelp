@@ -22,16 +22,71 @@
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Kategoriya nomi(uz):</label>
-                    <input type="text" class="form-control" name="name" value="{{ $category->name }}" required>
+                    <input type="text" class="form-control" name="name_uz" value="{{ $category->name_uz }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Kategoriya nomi(ru):</label>
+                    <input type="text" class="form-control" name="name_ru" value="{{ $category->name_ru }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Kategoriya nomi(en):</label>
+                    <input type="text" class="form-control" name="name_en" value="{{ $category->name_en }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Kategoriya nomi(kr):</label>
+                    <input type="text" class="form-control" name="name_kr" value="{{ $category->name_kr }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Obekt nomi(uz):</label>
+                    <input type="text" class="form-control" name="slug_uz" value="{{ $category->slug_uz }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Obekt nomi(ru):</label>
+                    <input type="text" class="form-control" name="slug_ru" value="{{ $category->slug_ru }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Obekt nomi(en):</label>
+                    <input type="text" class="form-control" name="slug_en" value="{{ $category->slug_en }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Obekt nomi(kr):</label>
+                    <input type="text" class="form-control" name="slug_kr" value="{{ $category->slug_kr }}" required>
                 </div>
                 <div class="form-group mb-4">
                     <label for="object_type">Obyekt turi:</label>
                     <select name="object_type" required class="form-select form-control">
-                        <option value="tasks" {{ old('object_type', $category->object_type ?? '') == 'tasks' ? 'selected' : '' }}>
-                            Topshiriqlar
+                        <option value="academia" {{ old('object_type', $category->object_type ?? '') == 'academia' ? 'selected' : '' }}>
+                            Ilmiy kengash
                         </option>
-                        <option value="baza" {{ old('object_type', $category->object_type ?? '') == 'baza' ? 'selected' : '' }}>
-                            Elektron baza
+                        <option value="bibliophilia" {{ old('object_type', $category->object_type ?? '') == 'bibliophilia' ? 'selected' : '' }}>
+                            Kitobxonlik
+                        </option>
+                        <option value="crimes" {{ old('object_type', $category->object_type ?? '') == 'crimes' ? 'selected' : '' }}>
+                            Jinoyatlar
+                        </option>
+                        <option value="institut" {{ old('object_type', $category->object_type ?? '') == 'institut' ? 'selected' : '' }}>
+                            Institut va ishga qabul
+                        </option>
+                        <option value="jurnal" {{ old('object_type', $category->object_type ?? '') == 'jurnal' ? 'selected' : '' }}>
+                            Jurnallar
+                        </option>
+                        <option value="news" {{ old('object_type', $category->object_type ?? '') == 'news' ? 'selected' : '' }}>
+                            Yangiliklar
+                        </option>
+                        <option value="research" {{ old('object_type', $category->object_type ?? '') == 'research' ? 'selected' : '' }}>
+                            Tadqiqotlar
+                        </option>
+                        <option value="scholars" {{ old('object_type', $category->object_type ?? '') == 'scholars' ? 'selected' : '' }}>
+                            Tadqiqotchilar va amaliy yordam
+                        </option>
+                        <option value="partner" {{ old('object_type', $category->object_type ?? '') == 'partner' ? 'selected' : '' }}>
+                            Hamkorlar
+                        </option>
+                        <option value="expertise" {{ old('object_type', $category->object_type ?? '') == 'expertise' ? 'selected' : '' }}>
+                            Ilmiy salohiyat va hamkorlar
+                        </option>
+                        <option value="articles" {{ old('object_type', $category->object_type ?? '') == 'articles' ? 'selected' : '' }}>
+                            Maqola va disertatsiya mavzulari
                         </option>
                     </select>
                 </div>

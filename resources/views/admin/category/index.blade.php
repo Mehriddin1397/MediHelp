@@ -61,10 +61,10 @@
                                         <tr class="single-item">
                                             <td>{{ $category->id}}</td>
                                             <td>
-                                                {{ $category->name }}
+                                                {{ $category->name_uz }}
                                             </td>
                                             <td>
-                                                {{ $category->object_type}}
+                                                {{ $category->slug_uz }}
                                             </td>
                                             <td>
                                                 <div class="hstack gap-2 justify-content-end">

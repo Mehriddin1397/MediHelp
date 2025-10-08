@@ -6,9 +6,20 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layouts.index');
+Route::get('/tes/boss', function () {
+    return view('admin.auth.login');
 });
+
+Route::get('/login', function () {
+    return view('admin.auth.login');
+})->name('login.page')->middleware('ip.restrict');;
+Route::post('/login',[\App\Http\Controllers\PageController::class,'login'])->name('login');
+Route::post('/logout',[\App\Http\Controllers\PageController::class,'logout'])->name('logout');
+
+Route::get('/',[\App\Http\Controllers\PageController::class,'main'])->name('main');
+Route::get('/contact',[\App\Http\Controllers\PageController::class,'contact'])->name('contact');
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/doctor/profile/edit', [DoctorProfileController::class, 'edit'])->name('doctor.profile.edit');
     Route::post('/doctor/profile', [DoctorProfileController::class, 'update'])->name('doctor.profile.update');
