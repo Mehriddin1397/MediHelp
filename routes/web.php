@@ -18,6 +18,10 @@ Route::post('/logout',[\App\Http\Controllers\PageController::class,'logout'])->n
 
 Route::get('/',[\App\Http\Controllers\PageController::class,'main'])->name('main');
 Route::get('/contact',[\App\Http\Controllers\PageController::class,'contact'])->name('contact');
+Route::get('/about',[\App\Http\Controllers\PageController::class,'about'])->name('about');
+Route::get('/service',[\App\Http\Controllers\PageController::class,'service'])->name('service');
+Route::get('/doctors',[\App\Http\Controllers\PageController::class,'doctors'])->name('doctors');
+Route::get('/chat',[\App\Http\Controllers\PageController::class,'chat'])->name('chat');
 
 
 Route::middleware('auth')->group(function () {

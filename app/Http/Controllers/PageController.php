@@ -52,6 +52,22 @@ class PageController extends Controller
     {
         return view('pages.main');
     }
+    public function contact()
+    {
+        return view('pages.contact');
+    }
+    public function about()
+    {
+        return view('pages.about');
+    }
+    public function service()
+    {
+        return view('pages.service');
+    }
+    public function doctors()
+    {
+        return view('pages.doctors');
+    }
 
     public function dashboard()
     {
@@ -73,7 +89,10 @@ class PageController extends Controller
 //            ->get();
 //
 //
-//        return view('admin.dashboard',  compact('tasksWithUsers', 'total', 'completed', 'incomplete', 'month'));
+        return view('admin.dashboard');
+    }
+    public function chat(){
+        return view('admin.chat');
     }
 
 
