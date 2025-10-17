@@ -15,9 +15,10 @@ class ReviewSeeder extends Seeder
         $doctors = User::where('role', 'doctor')->get();
 
         foreach ($patients as $patient) {
-            for ($i = 0; $i < 2; $i++) {
-                $doctor = $doctors->random();
+            // Har bir bemor 2 ta turli shifokorni baholaydi
+            $randomDoctors = $doctors->random(min(2, $doctors->count()));
 
+            foreach ($randomDoctors as $doctor) {
                 Review::create([
                     'patient_id' => $patient->id,
                     'doctor_id' => $doctor->id,
@@ -28,3 +29,4 @@ class ReviewSeeder extends Seeder
         }
     }
 }
+
