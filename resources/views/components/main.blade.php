@@ -87,7 +87,7 @@
             <a href="{{route('service')}}" class="nav-item nav-link">Xizmatlar</a>
             <a href="{{route('contact')}}" class="nav-item nav-link">Bog‘lanish</a>
         </div>
-        <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Kirish<i class="fa fa-arrow-right ms-3"></i></a>
+        <a href="{{route('login.page')}}" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Kirish<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
 </nav>
 <!-- Navbar End -->

@@ -36,7 +36,7 @@ class PageController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
 
 //            $projects = Project::with('participants')->get();
-            return view('pages.auth_code');
+            return view('admin.dashboard');
         }
 
         return back()->withErrors(['email' => 'Login amalga oshmadi, iltimos tekshirib qaytadan urinib ko‘ring.']);
@@ -93,6 +93,10 @@ class PageController extends Controller
     }
     public function chat(){
         return view('admin.chat');
+    }
+
+    public function profile(){
+        return view('admin.dashboard');
     }
 
 

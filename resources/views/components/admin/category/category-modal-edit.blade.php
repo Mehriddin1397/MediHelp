@@ -55,7 +55,7 @@
                 <div class="form-group mb-4">
                     <label for="object_type">Obyekt turi:</label>
                     <select name="object_type" required class="form-select form-control">
-                        <option value="academia" {{ old('object_type', $category->object_type ?? '') == 'academia' ? 'selected' : '' }}>
+                        <option value="academia" {{ old('object_type', $category->object_type ?? '') == 'specialties' ? 'selected' : '' }}>
                             Ilmiy kengash
                         </option>
                         <option value="bibliophilia" {{ old('object_type', $category->object_type ?? '') == 'bibliophilia' ? 'selected' : '' }}>

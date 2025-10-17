@@ -107,6 +107,6 @@
     </div>
 
     @include('components.admin.crimes.crimes-modal-create')
-    @include('components.admin.crimes.crimes-modal-edit', ['academia' => $academia])
+    @include('components.admin.crimes.crimes-modal-edit', ['specialties' => $academia])
 
 @endsection

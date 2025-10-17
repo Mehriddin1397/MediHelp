@@ -16,7 +16,7 @@
         </div>
 
         <div class="offcanvas-body">
-            <form action="{{ route('academia.update', $academy->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('specialties.update', $academy->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 

@@ -29,7 +29,7 @@
                         </div>
                         <h4 class="mb-3">Kardiologiya</h4>
                         <p class="mb-4">Kardiolog mutaxassislar yurak ritmi, qon bosimi, yurak xastaligi va qon aylanish tizimi bilan bog‘liq muammolarni aniqlaydi va davolash bo‘yicha maslahat beradi.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        <a class="btn" href="{{route('doctors')}}"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">

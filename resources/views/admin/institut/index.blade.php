@@ -107,6 +107,6 @@
     </div>
 
     @include('components.admin.institut.institut-modal-create')
-    @include('components.admin.institut.institut-modal-edit', ['academia' => $academia])
+    @include('components.admin.institut.institut-modal-edit', ['specialties' => $academia])
 
 @endsection

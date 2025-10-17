@@ -437,13 +437,13 @@
                 {{--                                </div>--}}
                 {{--                                <div>--}}
                 {{--                                    <div class="fw-semibold text-dark">Project Done</div>--}}
-                {{--                                    <div class="fs-12 text-muted">20/30 academia</div>--}}
+                {{--                                    <div class="fs-12 text-muted">20/30 specialties</div>--}}
                 {{--                                </div>--}}
                 {{--                            </div>--}}
                 {{--                            <div class="fs-4 fw-bold text-dark">20/30</div>--}}
                 {{--                        </div>--}}
                 {{--                        <div class="card-body d-flex align-items-center justify-content-between gap-4">--}}
-                {{--                            <div id="academia-done-area-chart"></div>--}}
+                {{--                            <div id="specialties-done-area-chart"></div>--}}
                 {{--                            <div class="fs-12 text-muted text-nowrap">--}}
                 {{--                                <span class="fw-semibold text-danger">42% more</span><br />--}}
                 {{--                                <span>from last week</span>--}}

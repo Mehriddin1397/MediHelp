@@ -108,6 +108,6 @@
     </div>
 
     @include('components.admin.news.news-modal-create')
-    @include('components.admin.news.news-modal-edit', ['academia' => $academia])
+    @include('components.admin.news.news-modal-edit', ['specialties' => $academia])
 
 @endsection

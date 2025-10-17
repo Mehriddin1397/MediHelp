@@ -16,16 +16,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/logo.svg')}}" />
     <!--! END: Favicon-->
     <!--! BEGIN: Bootstrap CSS-->
-    <link rel="stylesheet" type="text/css" href="/admin/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
     <!--! END: Bootstrap CSS-->
     <!--! BEGIN: Vendors CSS-->
-    <link rel="stylesheet" type="text/css" href="/admin/assets/vendors/css/vendors.min.css" />
-    <link rel="stylesheet" type="text/css" href="/admin/assets/vendors/css/daterangepicker.min.css" />
-    <link rel="stylesheet" type="text/css" href="/admin/assets/vendors/css/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="/admin/assets/vendors/css/select2-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/css/vendors.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/css/daterangepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/css/select2-theme.min.css">
     <!--! END: Vendors CSS-->
     <!--! BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="/admin/assets/css/theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/theme.min.css" />
     <!--! END: Custom CSS-->
     <!--! HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries !-->
     <!--! WARNING: Respond.js doesn"t work if you view the page via file: !-->
@@ -250,7 +250,7 @@
 <!--! Footer Script !-->
 <!--! ================================================================ !-->
 <!--! BEGIN: Vendors JS !-->
-<script src="/admin/assets/vendors/js/vendors.min.js"></script>
+<script src="/assets/vendors/js/vendors.min.js"></script>
 <!-- vendors.min.js {always must need to be top} -->
 {{--<script src="/admin/assets/vendors/js/daterangepicker.min.js"></script>--}}
 {{--<script src="/admin/assets/vendors/js/apexcharts.min.js"></script>--}}
@@ -259,8 +259,8 @@
 <!--! BEGIN: Apps Init  !-->
 {{--<script src="/admin/assets/vendors/js/select2.min.js"></script>--}}
 {{--<script src="/admin/assets/vendors/js/select2-active.min.js"></script>--}}
-<script src="/admin/assets/js/common-init.min.js"></script>
-<script src="/admin/assets/js/dashboard-init.min.js"></script>
+<script src="/assets/js/common-init.min.js"></script>
+<script src="/assets/js/dashboard-init.min.js"></script>
 <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('editor1');

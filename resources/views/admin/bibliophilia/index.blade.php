@@ -107,6 +107,6 @@
     </div>
 
     @include('components.admin.bibliophilia.bibliophilia-modal-create')
-    @include('components.admin.bibliophilia.bibliophilia-modal-edit', ['academia' => $academia])
+    @include('components.admin.bibliophilia.bibliophilia-modal-edit', ['specialties' => $academia])
 
 @endsection

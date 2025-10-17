@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Ilmiy kengash')
+@section('title', 'Sohalar')
 
 @section('content')
 
@@ -9,11 +9,10 @@
         <div class="page-header position-fixed">
             <div class="page-header-left d-flex align-items-center">
                 <div class="page-header-title">
-                    <h5 class="m-b-10">Ilmiy kengash</h5>
+                    <h5 class="m-b-10">Sohalar</h5>
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
-                    <li class="breadcrumb-item">Ilmiy kengash</li>
+                    <li class="breadcrumb-item">Sohalar</li>
                 </ul>
             </div>
             <div class="page-header-right ms-auto">
@@ -28,7 +27,7 @@
                         <a href="javascript:void(0);" class="btn btn-primary " data-bs-toggle="offcanvas"
                            data-bs-target="#tasksDetailsOffcanvas">
                             <i class="feather-plus me-2"></i>
-                            <span>Ilmiy kengash yaratish</span>
+                            <span>Sohalar yaratish</span>
                         </a>
                     </div>
                 </div>
@@ -51,29 +50,20 @@
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Photo</th>
                                         <th>Nomi</th>
-                                        <th>Kategoriyasi</th>
+                                        <th>Slug</th>
                                         <th class="text-end">Tahrirlash</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($academia as $index => $academy)
+                                    @foreach($specialties as $index => $academy)
                                         <tr class="single-item">
                                             <th>{{$index +1 }}</th>
                                             <td>
-                                                @foreach($academy->photos as $photo)
-                                                    <img src="{{ asset('storage/' . $photo->file_path) }}" alt="" width="20px">
-
-                                                @endforeach
+                                                {{ $academy->name }}
                                             </td>
                                             <td>
-                                                {{ $academy->name_uz }}
-                                            </td>
-                                            <td>
-                                                @foreach($academy->categories as $category)
-                                                    {{$category->name_uz}}
-                                                @endforeach
+                                                {{ $academy->slug }}
                                             </td>
                                             <td>
                                                 <div class="hstack gap-2 justify-content-end">
@@ -82,7 +72,7 @@
                                                        class="avatar-text avatar-md">
                                                         <i class="feather feather-edit-3"></i>
                                                     </a>
-                                                    <form action="{{ route('academia.destroy', $academy->id) }}"
+                                                    <form action="{{ route('specialties.destroy', $academy->id) }}"
                                                           method="POST">
                                                         @csrf
                                                         @method('DELETE')
@@ -106,7 +96,7 @@
 
     </div>
 
-    @include('components.admin.academia.academia-modal-create')
-    @include('components.admin.academia.academia-modal-edit', ['academia' => $academia])
+    @include('components.admin.specialties.academia-modal-create')
+    {{--    @include('components.admin.specialties.specialties-modal-edit', ['specialties' => $specialties])--}}
 
 @endsection
