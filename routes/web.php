@@ -25,6 +25,8 @@ Route::get('/service',[PageController::class,'service'])->name('service');
 Route::get('/doctors',[PageController::class,'doctors'])->name('doctors');
 Route::get('/chat',[PageController::class,'chat'])->name('chat');
 
+Route::get('/specialties/{id}/doctors', [SpecialtyController::class, 'show'])->name('specialties.show');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/doctor/profile/edit', [DoctorProfileController::class, 'edit'])->name('doctor.profile.edit');

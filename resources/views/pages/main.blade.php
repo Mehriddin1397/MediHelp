@@ -70,7 +70,7 @@
                     <p><i class="far fa-check-circle text-primary me-3"></i>Sifatli tibbiy xizmatlar</p>
                     <p><i class="far fa-check-circle text-primary me-3"></i>Faqat malakali shifokorlar</p>
                     <p><i class="far fa-check-circle text-primary me-3"></i>Tibbiy tadqiqot va innovatsiyalar</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Ko'rish</a>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="{{route('about')}}">Ko'rish</a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                         </div>
                         <h4 class="mb-3">Kardiologiya</h4>
                         <p class="mb-4">Kardiolog mutaxassislar yurak ritmi, qon bosimi, yurak xastaligi va qon aylanish tizimi bilan bog‘liq muammolarni aniqlaydi va davolash bo‘yicha maslahat beradi.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        <a class="btn" href="{{ route('specialties.show', 2) }}"><i class="fa fa-plus text-primary me-3"></i>Ko'rish</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -103,7 +103,7 @@
                         </div>
                         <h4 class="mb-3">Pulmonologiya</h4>
                         <p class="mb-4">Pulmonologlar nafas olish tizimi, o‘pka kasalliklari va allergik nafas yo‘li muammolari bo‘yicha maslahatlarga ixtisoslashgan.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        <a class="btn" href="{{ route('specialties.show', 1) }}"><i class="fa fa-plus text-primary me-3"></i>Ko'rish</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -113,7 +113,7 @@
                         </div>
                         <h4 class="mb-3">Nevrologiya</h4>
                         <p class="mb-4">Nevrologlar bosh miya, orqa miya va asab tizimi kasalliklarini aniqlaydi, bosh og‘rigi, uyqusizlik va stress kabi muammolarga yechim taklif etadi.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        <a class="btn" href="{{ route('specialties.show', 3) }}"><i class="fa fa-plus text-primary me-3"></i>Ko'rish</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -123,7 +123,7 @@
                         </div>
                         <h4 class="mb-3">Orthopedics</h4>
                         <p class="mb-4">Ortopedlar suyak, bo‘g‘im, mushak va tayanch-harakat tizimidagi shikastlanishlar va kasalliklarni davolash bilan shug‘ullanadi.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        <a class="btn" href="{{ route('specialties.show', 10) }}"><i class="fa fa-plus text-primary me-3"></i>Ko'rish</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -133,7 +133,7 @@
                         </div>
                         <h4 class="mb-3">Tish jarrohligi</h4>
                         <p class="mb-4">Tish jarrohlari og‘iz bo‘shlig‘i, tish ildizlari, milk va chaynov tizimi bilan bog‘liq muammolarni hal etish bo‘yicha xizmat ko‘rsatadi.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        <a class="btn" href="{{ route('specialties.show', 5) }}"><i class="fa fa-plus text-primary me-3"></i>Ko'rish</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -143,7 +143,7 @@
                         </div>
                         <h4 class="mb-3">Laboratoriya diagnostikasi</h4>
                         <p class="mb-4">Laboratoriya mutaxassislari qon, siydik va boshqa namunalarni tahlil qilib, shifokorlarga aniq diagnostika uchun zarur ma’lumotlarni taqdim etadi.</p>
-                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Ko'rish</a>
                     </div>
                 </div>
             </div>

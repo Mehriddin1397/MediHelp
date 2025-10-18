@@ -40,8 +40,10 @@ class SpecialtyController extends Controller
      */
     public function show($id)
     {
-        $specialty = Specialty::findOrFail($id);
-        return view('specialties.show', compact('specialty'));
+        $specialty = Specialty::with(['doctors.user'])->findOrFail($id);
+        $name = $specialty->name;
+
+        return view('pages.doctors', compact('specialty', 'name'));
     }
 
     /**
