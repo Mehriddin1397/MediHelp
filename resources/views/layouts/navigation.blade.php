@@ -76,7 +76,6 @@
                             </svg>
                         </button>
                         <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 border rounded shadow-md py-1 z-50">
-                            <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">{{ __('Profile') }}</a>
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit" class="w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -142,19 +141,7 @@
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    @if(View::exists('components.responsive-nav-link'))
-                        <x-responsive-nav-link :href="route('logout')"
-                                               onclick="event.preventDefault(); this.closest('form').submit();">
-                            {{ __('Log Out') }}
-                        </x-responsive-nav-link>
-                    @else
-                        <button type="submit"
-                                class="block w-full text-left pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300">
-                            {{ __('Log Out') }}
-                        </button>
-                    @endif
+                   chiqish
                 </form>
             </div>
         </div>

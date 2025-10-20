@@ -16,12 +16,13 @@ class DoctorProfileSeeder extends Seeder
         $specialties = Specialty::pluck('id')->toArray();
 
         $doctors = User::where('role', 'doctor')->get();
+        $img = '/img/team-';
 
         foreach ($doctors as $doctor) {
             DoctorProfile::create([
                 'user_id' => $doctor->id,
                 'specialty_id' => Arr::random($specialties),
-                'avatar_path' => 'avatars/default.png',
+                'avatar_path' => $img . rand(1, 4) . '.jpg',
                 'bio' => fake()->sentence(10),
                 'workplace' => fake()->company(),
                 'experience_years' => rand(3, 20),

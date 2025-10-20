@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Project;
-use App\Models\Task;
+
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -20,32 +18,34 @@ class PageController extends Controller
             'password' => 'required'
         ]);
 
-        // Foydalanuvchini topamiz
+        // Foydalanuvchini tekshiramiz
         $user = User::where('email', $request->email)->first();
 
         if (!$user) {
             return back()->withErrors(['email' => 'Bunday foydalanuvchi mavjud emas.']);
         }
 
-        // Parolni tekshiramiz
         if (!Hash::check($request->password, $user->password)) {
             return back()->withErrors(['password' => 'Noto‘g‘ri parol!']);
         }
 
         // Login qilish
         if (Auth::attempt($request->only('email', 'password'))) {
+            $request->session()->regenerate();
 
-//            $projects = Project::with('participants')->get();
-            return view('admin.dashboard');
+            // 🔥 Foydalanuvchini login sahifasidan oldingi manziliga qaytaramiz
+            return redirect()->intended(route('main'))->with('success', 'Xush kelibsiz!');
         }
 
-        return back()->withErrors(['email' => 'Login amalga oshmadi, iltimos tekshirib qaytadan urinib ko‘ring.']);
+        return back()->withErrors([
+            'email' => 'Login amalga oshmadi, iltimos tekshirib qaytadan urinib ko‘ring.'
+        ]);
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('main');
     }
 
     public function main()

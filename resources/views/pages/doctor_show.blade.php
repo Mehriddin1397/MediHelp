@@ -1,4 +1,4 @@
-<x-main title="Contact">
+<x-main title="Shifokor">
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -6,7 +6,7 @@
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="{{route('main')}}">Home</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">doctor nomi</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">{{ $doctor->name }}</li>
                 </ol>
             </nav>
         </div>
@@ -25,20 +25,20 @@
 
                 <div>
                     <h3 class="fw-bold mb-1">{{ $doctor->name }}</h3>
-                    <p class="mb-1 text-muted">{{ $doctor->profile->specialty->name ?? 'Noma’lum soha' }}</p>
-                    <p class="mb-1">🏢 {{ $doctor->profile->workplace ?? 'Ma’lumot yo‘q' }}</p>
-                    <p class="mb-1">🧑‍⚕️ Tajriba: {{ $doctor->profile->experience_years ?? 0 }} yil</p>
-                    <p class="mb-2">📜 {{ $doctor->profile->bio ?? 'Biografiya kiritilmagan' }}</p>
+                    <p class="mb-1 text-muted">{{ $doctor->doctorProfile->specialty->name ?? 'Noma’lum soha' }}</p>
+                    <p class="mb-1">🏢 {{ $doctor->doctorProfile->workplace ?? 'Ma’lumot yo‘q' }}</p>
+                    <p class="mb-1">🧑‍⚕️ Tajriba: {{ $doctor->doctorProfile->experience_years ?? 0 }} yil</p>
+                    <p class="mb-2">📜 {{ $doctor->doctorProfile->bio ?? 'Biografiya kiritilmagan' }}</p>
 
                     {{-- Ijtimoiy tarmoqlar --}}
                     <div>
-                        @if(isset($doctor->profile->social_links['facebook']))
-                            <a href="{{ $doctor->profile->social_links['facebook'] }}" target="_blank" class="me-2">
+                        @if(isset($doctor->doctorProfile->social_links['facebook']))
+                            <a href="{{ $doctor->doctorProfile->social_links['facebook'] }}" target="_blank" class="me-2">
                                 <i class="fab fa-facebook text-primary fs-4"></i>
                             </a>
                         @endif
-                        @if(isset($doctor->profile->social_links['instagram']))
-                            <a href="{{ $doctor->profile->social_links['instagram'] }}" target="_blank" class="me-2">
+                        @if(isset($doctor->doctorProfile->social_links['instagram']))
+                            <a href="{{ $doctor->doctorProfile->social_links['instagram'] }}" target="_blank" class="me-2">
                                 <i class="fab fa-instagram text-danger fs-4"></i>
                             </a>
                         @endif
@@ -82,7 +82,7 @@
             </div>
             <div class="card-body">
                 @auth
-                    <form action="{{ route('reviews.store') }}" method="POST">
+                    <form action="{{route('reviews.store')}}" method="POST">
                         @csrf
                         <input type="hidden" name="doctor_id" value="{{ $doctor->id }}">
 

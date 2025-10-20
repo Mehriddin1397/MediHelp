@@ -27,10 +27,13 @@ Route::get('/chat',[PageController::class,'chat'])->name('chat');
 
 Route::get('/specialties/{id}/doctors', [SpecialtyController::class, 'show'])->name('specialties.show');
 Route::get('/doctors/{id}/doctor', [DoctorProfileController::class, 'show'])->name('doctor.show');
-Route::get('/doctors/{id}/doctor', [DoctorProfileController::class, 'shows'])->name('chat.show');
+Route::get('/doctor/{id}', [DoctorProfileController::class, 'shows'])->name('chat.show');
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
 
 
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard',[PageController::class,'dashboard'])->name('dashboard');
     Route::get('/doctor/profile/edit', [DoctorProfileController::class, 'edit'])->name('doctor.profile.edit');
     Route::post('/doctor/profile', [DoctorProfileController::class, 'update'])->name('doctor.profile.update');
 
