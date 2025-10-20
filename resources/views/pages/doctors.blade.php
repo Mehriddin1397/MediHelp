@@ -27,7 +27,10 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
+                            <a href="{{ route('doctor.show', $doctorProfile->user->id) }}">
                             <img class="img-fluid" src="{{ asset($doctorProfile->avatar_path) }}" alt="">
+
+                            </a>
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>{{ $doctorProfile->user->name }}</h5>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DoctorProfile;
 use App\Models\Specialty;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
@@ -40,6 +41,19 @@ class DoctorProfileController extends Controller
         auth()->user()->doctorProfile()->updateOrCreate(['user_id' => auth()->id()], $data);
 
         return back()->with('success', 'Profil yangilandi.');
+    }
+
+    public function show($id)
+    {
+        // Shifokorni profili, mutaxassisligi va sharhlari bilan yuklaymiz
+        $doctor = User::with([
+            'doctorProfile.specialty', // ✅ to‘g‘ri nom
+            'reviews.patient'
+        ])
+            ->where('role', 'doctor')
+            ->findOrFail($id);
+
+        return view('pages.doctor_show', compact('doctor'));
     }
 }
 
