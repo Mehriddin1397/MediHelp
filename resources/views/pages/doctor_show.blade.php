@@ -45,7 +45,7 @@
                     </div>
 
                     {{-- Chat tugmasi --}}
-                    <a href="{{ route('chat.show', $doctor->id) }}" class="btn btn-success mt-3">
+                    <a href="{{ route('chats', $doctor->id) }}" class="btn btn-success mt-3">
                         💬 Chatga o‘tish
                     </a>
                 </div>

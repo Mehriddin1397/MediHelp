@@ -46,3 +46,11 @@ Route::middleware('auth')->group(function () {
 
 
 });
+
+
+use App\Http\Controllers\ChatController;
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/chat/{receiverId}', [ChatController::class, 'show'])->name('chats');
+    Route::post('/chat/{receiverId}', [ChatController::class, 'store'])->name('chat.store');
+});
