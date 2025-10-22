@@ -48,6 +48,9 @@
                     <a href="{{ route('chats', $doctor->id) }}" class="btn btn-success mt-3">
                         💬 Chatga o‘tish
                     </a>
+                    <a href="{{ route('ai.chat') }}" class="btn btn-success mt-3">
+                        💬 AI tibbiy yordamchi
+                    </a>
                 </div>
             </div>
         </div>

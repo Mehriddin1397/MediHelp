@@ -18,12 +18,12 @@
                         <span class="nxl-mtext">Profil</span><span class="nxl-arrow"></span>
                     </a>
                 </li>
-{{--                <li class="nxl-item nxl-hasmenu">--}}
-{{--                    <a href="{{route('specialties.index')}}" class="nxl-link">--}}
-{{--                        <span class="nxl-micon"><i class="feather-layout"></i></span>--}}
-{{--                        <span class="nxl-mtext">Sohalar</span><span class="nxl-arrow"></span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nxl-item nxl-hasmenu">
+                    <a href="{{ route('ai.chat') }}" class="nxl-link">
+                        <span class="nxl-micon"><i class="feather-layout"></i></span>
+                        <span class="nxl-mtext">AI tibbiy yordamchi</span><span class="nxl-arrow"></span>
+                    </a>
+                </li>
 {{--                <li class="nxl-item nxl-hasmenu">--}}
 {{--                    <a href="{{ route('chats', auth()->user()->id) }}" class="nxl-link">--}}
 {{--                        <span class="nxl-micon"><i class="feather-layout"></i></span>--}}

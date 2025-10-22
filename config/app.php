@@ -123,4 +123,11 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'aliases' => [
+        // boshqa aliaslar ...
+        'OpenAI' => OpenAI\Laravel\Facades\OpenAI::class,
+    ],
+
+
+
 ];

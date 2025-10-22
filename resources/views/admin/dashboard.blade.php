@@ -28,10 +28,10 @@
 
                     </div>
                         <div class="user-profile-info">
-                            <h2 class="user-profile-name">Foydalanuvchi Ismi: {{Auth::user()->name}}
+                            <h2 class="user-profile-name">Foydalanuvchi Ismi: {{ auth()->user()->name}}
                             </h2>
 
-                            <p class="user-profile-email">Email: {{\Illuminate\Support\Facades\Auth::user()->email}}</p>
+                            <p class="user-profile-email">Email: {{auth()->user()->email}}</p>
                         </div>
 
 

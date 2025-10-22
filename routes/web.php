@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AIChatController;
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\DoctorProfileController;
 use App\Http\Controllers\PageController;
@@ -7,6 +8,11 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SpecialtyController;
 use Illuminate\Support\Facades\Route;
+use OpenAI\Factory;
+
+
+
+
 
 Route::get('/tes/boss', function () {
     return view('admin.auth.login');
@@ -53,4 +59,9 @@ use App\Http\Controllers\ChatController;
 Route::middleware(['auth'])->group(function () {
     Route::get('/chat/{receiverId}', [ChatController::class, 'show'])->name('chats');
     Route::post('/chat/{receiverId}', [ChatController::class, 'store'])->name('chat.store');
+
+    Route::get('/ai-chat', [AIChatController::class, 'index'])->name('ai.chat');
+    Route::post('/ai-chat/send', [AIChatController::class, 'sendMessage'])->name('ai.chat.send');
 });
+
+
