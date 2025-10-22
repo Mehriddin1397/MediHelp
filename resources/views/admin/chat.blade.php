@@ -8,7 +8,7 @@
             <div class="content-area">
                 <div class="content-area-header sticky-top bg-white p-3">
                     <div class="d-flex align-items-center gap-3">
-                        <img src="{{ $receiver->profile_photo_url ?? asset('assets/images/avatar/default.png') }}" class="img-fluid rounded-circle" width="50">
+                        <img src="{{ asset($receiver->doctorProfile->avatar_path ?? 'assets/images/avatar/default.png') }}" class="img-fluid rounded-circle" width="50">
                         <div>
                             <h5 class="mb-0">{{ $receiver->name }}</h5>
                             <small class="text-success">Active Now</small>

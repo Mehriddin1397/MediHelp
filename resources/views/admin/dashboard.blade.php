@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="user-profile-container">
                     <div class="user-profile-image">
-                            <img src="{{asset('assets/images/logoo.jfif')}}" id="userImage" alt="User Photo">
+                            <img src="{{asset('/img/user1.png')}}" id="userImage" alt="User Photo">
 
                     </div>
                         <div class="user-profile-info">
