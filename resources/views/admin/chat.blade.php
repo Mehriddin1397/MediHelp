@@ -1,6 +1,11 @@
 @extends('layouts.admin')
 
 @section('title', 'Chat')
+@php
+use Illuminate\Support\Facades\Auth
+@endphp
+
+
 
 @section('content')
     <div class="nxl-content without-header nxl-full-content">

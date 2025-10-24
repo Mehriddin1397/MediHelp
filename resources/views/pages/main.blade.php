@@ -233,7 +233,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
+                            <a href="{{ route('doctor.show', 5) }}">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            </a>
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Maftuna Eshonhujayeva</h5>
@@ -249,7 +251,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
+                            <a href="{{ route('doctor.show', 4) }}">
                             <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            </a>
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Doctor Eshchanov</h5>
@@ -265,7 +269,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
+                            <a href="{{ route('doctor.show', 3) }}">
                             <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            </a>
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Xurmatoy Xamroqulova</h5>
@@ -281,7 +287,9 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
+                            <a href="{{ route('doctor.show', 2) }}">
                             <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            </a>
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Farg'onalik Tabib</h5>
