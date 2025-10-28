@@ -12,7 +12,7 @@ class AIChatController extends Controller
      */
     public function index()
     {
-        return view('admin.AIchat'); // e’tibor ber: fayl nomidagi harf katta-kichik farq qiladi
+        return view('admin.Aichat'); // e’tibor ber: fayl nomidagi harf katta-kichik farq qiladi
     }
 
     /**
